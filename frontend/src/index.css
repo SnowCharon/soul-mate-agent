@@ -1,0 +1,179 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  /* 灵魂伴侣 - 琥珀色系主题 */
+  --primary: #D97706;  /* 琥珀色 - 温暖、知识的象征 */
+  --primary-foreground: #FFFBEB;  /* 琥珀50 */
+  --sidebar-primary: #B45309;  /* 琥珀700 */
+  --sidebar-primary-foreground: #FFFBEB;
+  --chart-1: #FCD34D;  /* 琥珀300 */
+  --chart-2: #F59E0B;  /* 琥珀400 */
+  --chart-3: #D97706;  /* 琥珀500 */
+  --chart-4: #B45309;  /* 琥珀700 */
+  --chart-5: #78350F;  /* 琥珀900 */
+  --radius: 0.75rem;
+  --background: #F5F1E8;  /* 米色背景 - 纸张感 */
+  --foreground: #3F3F3F;  /* 深灰色文字 */
+  --card: #FFFFFF;  /* 白色卡片 */
+  --card-foreground: #3F3F3F;
+  --popover: #FFFFFF;
+  --popover-foreground: #3F3F3F;
+  --secondary: #FEF3C7;  /* 琥珀100 */
+  --secondary-foreground: #78350F;  /* 琥珀900 */
+  --muted: #E5E0D6;  /* 米色600 */
+  --muted-foreground: #6B6B6B;  /* 灰色 */
+  --accent: #D97706;  /* 琥珀500 */
+  --accent-foreground: #FFFFFF;
+  --destructive: #DC2626;  /* 红色 */
+  --destructive-foreground: #FFFFFF;
+  --border: #E5E0D6;  /* 米色600 */
+  --input: #FFFFFF;  /* 白色输入框 */
+  --ring: #D97706;  /* 琥珀500 */
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #3F3F3F;
+  --sidebar-accent: #FEF3C7;  /* 琥珀100 */
+  --sidebar-accent-foreground: #78350F;  /* 琥珀900 */
+  --sidebar-border: #E5E0D6;
+  --sidebar-ring: #D97706;
+}
+
+.dark {
+  /* 深色模式 - 保持琥珀色系但调整亮度 */
+  --primary: #F59E0B;  /* 琥珀400 */
+  --primary-foreground: #78350F;  /* 琥珀900 */
+  --sidebar-primary: #F59E0B;
+  --sidebar-primary-foreground: #78350F;
+  --background: #1F1F1F;  /* 深灰色背景 */
+  --foreground: #F0F0F0;  /* 浅灰色文字 */
+  --card: #2A2A2A;  /* 深卡片 */
+  --card-foreground: #F0F0F0;
+  --popover: #2A2A2A;
+  --popover-foreground: #F0F0F0;
+  --secondary: #3F3F3F;  /* 深灰色600 */
+  --secondary-foreground: #F59E0B;  /* 琥珀400 */
+  --muted: #404040;  /* 深灰色700 */
+  --muted-foreground: #A0A0A0;  /* 浅灰色 */
+  --accent: #F59E0B;  /* 琥珀400 */
+  --accent-foreground: #1F1F1F;
+  --destructive: #EF4444;  /* 红色 */
+  --destructive-foreground: #FFFFFF;
+  --border: #404040;  /* 深灰色700 */
+  --input: #3F3F3F;  /* 深灰色600 */
+  --ring: #F59E0B;  /* 琥珀400 */
+  --chart-1: #FCD34D;  /* 琥珀300 */
+  --chart-2: #F59E0B;  /* 琥珀400 */
+  --chart-3: #D97706;  /* 琥珀500 */
+  --chart-4: #B45309;  /* 琥珀700 */
+  --chart-5: #78350F;  /* 琥珀900 */
+  --sidebar: #2A2A2A;
+  --sidebar-foreground: #F0F0F0;
+  --sidebar-accent: #3F3F3F;
+  --sidebar-accent-foreground: #F59E0B;
+  --sidebar-border: #404040;
+  --sidebar-ring: #F59E0B;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  /**
+   * Custom container utility that centers content and adds responsive padding.
+   *
+   * This overrides Tailwind's default container behavior to:
+   * - Auto-center content (mx-auto)
+   * - Add responsive horizontal padding
+   * - Set max-width for large screens
+   *
+   * Usage: <div className="container">...</div>
+   *
+   * For custom widths, use max-w-* utilities directly:
+   * <div className="max-w-6xl mx-auto px-4">...</div>
+   */
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* 16px - mobile padding */
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem; /* 32px - desktop padding */
+      padding-right: 2rem;
+      max-width: 1280px; /* Standard content width */
+    }
+  }
+}

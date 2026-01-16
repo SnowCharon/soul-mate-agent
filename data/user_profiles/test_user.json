@@ -1,0 +1,25 @@
+{
+  "user_id": "test_user",
+  "created_at": "2026-01-16T02:39:01.162011",
+  "updated_at": "2026-01-16T02:39:04.877473",
+  "preferences": {
+    "genres": [],
+    "topics": [],
+    "authors": [],
+    "reading_level": "intermediate",
+    "content_types": [
+      "book",
+      "article"
+    ],
+    "languages": [
+      "zh",
+      "en"
+    ]
+  },
+  "reading_history": [],
+  "feedback": {
+    "liked": [],
+    "disliked": []
+  },
+  "interaction_count": 1
+}
